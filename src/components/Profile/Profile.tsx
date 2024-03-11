@@ -60,7 +60,7 @@ export const Profile: React.FC<ProfileProps> = () => {
         {userData?.firstName}
       </button>
 
-      {isOpen && (
+      {isOpen ? (
         <div
           ref={dropdownRef}
           id="dropdownAvatarName"
@@ -91,7 +91,7 @@ export const Profile: React.FC<ProfileProps> = () => {
             </button>
           </div>
         </div>
-      )}
+      ) : null}
     </div>
   );
 };

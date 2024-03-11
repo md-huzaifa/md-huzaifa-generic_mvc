@@ -5,6 +5,7 @@ import { FcGoogle } from "react-icons/fc";
 
 import { InputField, Checkbox } from "@/components";
 import { useAuth } from "@/context/AuthContext";
+import { configs } from "@/configs";
 
 interface LoginProps {}
 
@@ -33,7 +34,7 @@ export const Login: React.FC<LoginProps> = () => {
     setLoading(true);
     axios
       .post(
-        "https://dummyjson.com/auth/login",
+        `${configs.SERVER_URL}/auth/login`,
         JSON.stringify({
           username: "kminchelle",
           password: "0lelplR",

@@ -1,6 +1,6 @@
 export function InputField(props: {
   id: string;
-  label: string;
+  label: string | number;
   extra: string;
   name: string;
   placeholder: string;
@@ -8,6 +8,7 @@ export function InputField(props: {
   state?: string;
   disabled?: boolean;
   type?: string;
+  value?: string | number;
   onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
 }) {
   const {
@@ -20,6 +21,7 @@ export function InputField(props: {
     variant,
     disabled,
     onChange,
+    value,
   } = props;
 
   return (
@@ -40,6 +42,7 @@ export function InputField(props: {
         placeholder={placeholder}
         className={`mt-2 flex h-12 w-full items-center justify-center rounded-xl border bg-white/0 p-3 text-sm outline-none border-gray-500`}
         onChange={onChange}
+        value={value}
       />
     </div>
   );
