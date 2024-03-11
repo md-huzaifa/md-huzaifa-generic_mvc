@@ -106,6 +106,7 @@ export const AddUser: React.FC<props> = ({
                   type="text"
                   value={formData.firstName}
                   onChange={handleChange}
+                  required={true}
                 />
                 <InputField
                   variant="text"
@@ -117,6 +118,7 @@ export const AddUser: React.FC<props> = ({
                   type="text"
                   value={formData.lastName}
                   onChange={handleChange}
+                  required={true}
                 />
                 <InputField
                   variant="text"
@@ -128,6 +130,7 @@ export const AddUser: React.FC<props> = ({
                   type="number"
                   value={formData.age}
                   onChange={handleChange}
+                  required={true}
                 />
                 <button
                   type="submit"

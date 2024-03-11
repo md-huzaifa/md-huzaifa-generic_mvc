@@ -9,6 +9,7 @@ export function InputField(props: {
   disabled?: boolean;
   type?: string;
   value?: string | number;
+  required?: boolean;
   onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
 }) {
   const {
@@ -22,6 +23,7 @@ export function InputField(props: {
     disabled,
     onChange,
     value,
+    required,
   } = props;
 
   return (
@@ -43,6 +45,7 @@ export function InputField(props: {
         className={`mt-2 flex h-12 w-full items-center justify-center rounded-xl border bg-white/0 p-3 text-sm outline-none border-gray-500`}
         onChange={onChange}
         value={value}
+        required={required}
       />
     </div>
   );

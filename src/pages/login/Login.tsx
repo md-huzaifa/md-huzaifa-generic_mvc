@@ -80,6 +80,7 @@ export const Login: React.FC<LoginProps> = () => {
               id="email"
               type="text"
               onChange={handleChange}
+              required={true}
             />
 
             {/* Password */}
@@ -92,6 +93,7 @@ export const Login: React.FC<LoginProps> = () => {
               id="password"
               type="password"
               onChange={handleChange}
+              required={true}
             />
             {/* Checkbox */}
             <div className="mb-4 flex items-center justify-between px-2">
