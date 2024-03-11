@@ -7,7 +7,7 @@ interface UserListProps {}
 
 export const UserList: React.FC<UserListProps> = () => {
   const { loading, userList } = useUserList();
-  console.log("🚀 ~ userList:", userList);
+
   return (
     <PageLayout>
       <>

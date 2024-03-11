@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
+import { configs } from "@/configs";
 
 import type { UserData } from "@/types/userData.types";
 export const useUser = () => {
@@ -17,7 +18,7 @@ export const useUser = () => {
 
     const fetchUserData = async () => {
       try {
-        const response = await axios.get("https://dummyjson.com/auth/me", {
+        const response = await axios.get(`${configs.SERVER_URL}/auth/me`, {
           headers: {
             Authorization: `Bearer ${token}`,
           },

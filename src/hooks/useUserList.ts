@@ -1,5 +1,6 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
+import { configs } from "@/configs";
 
 export const useUserList = () => {
   const [userList, setUserList] = useState<any>();
@@ -9,7 +10,7 @@ export const useUserList = () => {
   useEffect(() => {
     const fetchUserList = async () => {
       try {
-        const response = await axios.get("https://dummyjson.com/users");
+        const response = await axios.get(`${configs.SERVER_URL}/users`);
         setUserList(response.data);
       } catch (error) {
         console.error("Error fetching user list data:", error);
